@@ -1,0 +1,45 @@
+{
+  "name": "@lomray/microservice-config",
+  "version": "1.0.0",
+  "description": "Contains microservices configuration files",
+  "main": "index.js",
+  "keywords": [
+    "js",
+    "microservice",
+    "config",
+    "configurations"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lomray-Software/microservice-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Lomray-Software/microservice-config/issues"
+  },
+  "homepage": "https://github.com/Lomray-Software/microservice-config",
+  "author": "Mikhail Yarmaliuk",
+  "license": "Apache-2.0",
+  "scripts": {},
+  "dependencies": {
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
+    "@istanbuljs/nyc-config-typescript": "^1.0.2",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-replace": "^5.0.2",
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/npm": "^9.0.1",
+    "@zerollup/ts-transform-paths": "^1.7.18",
+    "cross-env": "^7.0.3",
+    "rollup": "^2.79.1",
+    "rollup-plugin-cleaner": "^1.0.0",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-folder-input": "^1.0.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-ts": "3.0.2",
+    "semantic-release": "^20.0.2",
+    "semantic-release-monorepo": "^7.0.5"
+  }
+}
