@@ -52,6 +52,6 @@
     "rollup.config.js"
   ],
   "ts-node": {
-    "require": ["tsconfig-paths/register"]
+    "require": ["@lomray/tsconfig-paths/register"]
   }
 }
