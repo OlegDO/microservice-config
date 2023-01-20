@@ -22,7 +22,9 @@
   "homepage": "https://github.com/Lomray-Software/microservice-config",
   "author": "Mikhail Yarmaliuk",
   "license": "Apache-2.0",
-  "scripts": {},
+  "scripts": {
+    "build": "rollup -c"
+  },
   "dependencies": {
     "@commitlint/cli": "^17.4.2",
     "@commitlint/config-conventional": "^17.4.2",
