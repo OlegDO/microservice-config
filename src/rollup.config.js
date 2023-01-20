@@ -1,10 +1,10 @@
-import json from '@rollup/plugin-json';
-import replace from '@rollup/plugin-replace';
-import cleaner from 'rollup-plugin-cleaner';
-import copy from 'rollup-plugin-copy';
-import { folderInput } from 'rollup-plugin-folder-input';
-import peerDepsExternal from 'rollup-plugin-peer-deps-external';
-import typescript from 'rollup-plugin-ts';
+const json = require('@rollup/plugin-json');
+const replace = require('@rollup/plugin-replace');
+const cleaner = require('rollup-plugin-cleaner');
+const copy = require('rollup-plugin-copy');
+const { folderInput } = require('rollup-plugin-folder-input');
+const peerDepsExternal = require('rollup-plugin-peer-deps-external');
+const typescript = require('rollup-plugin-ts');
 
 /**
  * This is root config for microservices
@@ -62,4 +62,4 @@ const config = {
   ],
 };
 
-export default config;
+module.exports = config;
