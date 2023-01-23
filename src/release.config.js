@@ -1,3 +1,5 @@
+const shouldPublishNpm = Boolean(Number(process.env.PUBLISH_PACKAGE) || 0);
+
 /**
  * This is root config for microservices
  * All microservices extends from this
@@ -24,12 +26,12 @@ module.exports = {
           ' && zip -r build.zip lib',
       },
     ],
-    [
+    ...([shouldPublishNpm ? [
       '@semantic-release/npm',
       {
         pkgRoot: './lib',
       },
-    ],
+    ] : []]),
     [
       '@semantic-release/github',
       {
