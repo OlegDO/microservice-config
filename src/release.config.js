@@ -26,12 +26,12 @@ module.exports = {
           ' && zip -r build.zip lib',
       },
     ],
-    ...([shouldPublishNpm ? [
+    ...(shouldPublishNpm ? [[
       '@semantic-release/npm',
       {
         pkgRoot: './lib',
       },
-    ] : []]),
+    ]] : []),
     [
       '@semantic-release/github',
       {
