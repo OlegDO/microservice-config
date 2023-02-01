@@ -42,7 +42,8 @@
       "@entities/*": ["./src/entities/*"],
       "@repositories/*": ["./src/repositories/*"],
       "@services/*": ["./src/services/*"],
-      "@subscribers/*": ["./src/subscribers/*"]
+      "@subscribers/*": ["./src/subscribers/*"],
+      "@templates/*": ["./src/templates/*"]
     }
   },
   "exclude": [
