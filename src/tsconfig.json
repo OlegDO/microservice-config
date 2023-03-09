@@ -41,6 +41,7 @@
       "@entities/*": ["./src/entities/*"],
       "@jobs/*": ["./src/jobs/*"],
       "@methods/*": ["./src/methods/*"],
+      "@rooms/*": ["./src/rooms/*"],
       "@repositories/*": ["./src/repositories/*"],
       "@services/*": ["./src/services/*"],
       "@subscribers/*": ["./src/subscribers/*"],
