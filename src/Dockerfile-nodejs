@@ -2,6 +2,8 @@ FROM node:18.13.0-alpine
 
 MAINTAINER Yarmaliuk Mikhail <mikhail.yarmaliuk@lomray.com>
 
+ARG NPM_TOKEN
+
 ENV WEB_PATH=/var/www
 
 RUN mkdir -p $WEB_PATH
@@ -13,6 +15,7 @@ COPY ./package.json $WEB_PATH/package.json
 COPY ./package-lock.json $WEB_PATH/package-lock.json
 RUN rm ./lib/package.json
 
+RUN echo "//npm.pkg.github.com/:_authToken=${NPM_TOKEN}" > .npmrc
 RUN npm ci --production
 
 CMD npm run start:prod
