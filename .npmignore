@@ -17,6 +17,7 @@ coverage
 commitlint.config.js
 .mocharc.js
 .prettierrc.js
+.nvmrc
 sonar-project.properties
 scratch.http
 docker-compose.yml
