@@ -33,7 +33,7 @@
     "@rollup/plugin-json": "^6.0.0",
     "@rollup/plugin-replace": "^5.0.2",
     "@semantic-release/exec": "^6.0.3",
-    "@semantic-release/npm": "^10.0.3",
+    "@semantic-release/npm": "9.0.2",
     "@zerollup/ts-transform-paths": "^1.7.18",
     "cross-env": "^7.0.3",
     "rollup": "^2.79.1",
