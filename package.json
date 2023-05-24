@@ -29,7 +29,7 @@
     "@commitlint/cli": "^17.6.3",
     "@commitlint/config-conventional": "^17.6.3",
     "@istanbuljs/nyc-config-typescript": "^1.0.2",
-    "@lomray/tsconfig-paths": "^4.1.3",
+    "@lomray/tsconfig-paths": "^4.1.4",
     "@rollup/plugin-json": "^6.0.0",
     "@rollup/plugin-replace": "^5.0.2",
     "@semantic-release/exec": "^6.0.3",
