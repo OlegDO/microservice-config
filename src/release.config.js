@@ -22,7 +22,7 @@ module.exports = {
       {
         publishCmd:
           'zip -r build.zip lib' +
-          'echo "${nextRelease.version}" > .version',
+          " && echo '${nextRelease.version}' > .version",
       },
     ],
     ...(shouldPublishNpm ? [[
