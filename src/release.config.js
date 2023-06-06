@@ -1,5 +1,6 @@
 const shouldPublishNpm = Boolean(Number(process.env.PUBLISH_PACKAGE) || 0);
 const workingDir = process.env.SEMANTIC_WORKING_DIR;
+const rootDir = process.env.SEMANTIC_ROOT_DIR;
 
 /**
  * This is root config for microservices
@@ -21,10 +22,10 @@ module.exports = {
     [
       '@semantic-release/exec',
       {
-        execCwd: workingDir,
         publishCmd:
-          'npx @lomray/microservices-cli patch-package-version --package-version ${nextRelease.version}' +
-          ' && zip -r build.zip lib',
+          'zip -r build.zip lib' +
+          ` && cd ${rootDir} npx @lomray/microservices-cli patch-package-version --dir ${workingDir} ` +
+          ' --package-version ${nextRelease.version}',
       },
     ],
     ...(shouldPublishNpm ? [[
