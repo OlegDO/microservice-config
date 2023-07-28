@@ -13,7 +13,7 @@ module.exports = {
       channel: 'beta',
     },
   ],
-  extends: '@lomray/semantic-release-monorepo',
+  extends: '@lomray/semantic-release-monorepo/package.json',
   plugins: [
     '@semantic-release/commit-analyzer',
     '@semantic-release/release-notes-generator',
