@@ -7,7 +7,7 @@ export default {
   input: ['src/mocharc.js'],
   output: {
     dir: 'lib',
-    format: 'esm',
+    format: 'es',
   },
   plugins: [
     del({ targets: 'lib/*', runOnce: true }),
