@@ -14,7 +14,7 @@ export default {
   input: ['src/**/*.ts', 'migrations/*.ts'],
   output: {
     dir: 'lib',
-    format: 'es',
+    format: 'cjs',
     preserveModules: true,
     preserveModulesRoot: 'src',
     exports: 'auto',
