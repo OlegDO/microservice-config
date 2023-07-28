@@ -2,6 +2,7 @@
   "compilerOptions": {
     "outDir": "./lib",
     "allowJs": true,
+    "composite": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowUnreachableCode": false,
@@ -14,9 +15,10 @@
     "lib": [
       "es6",
       "es2015",
-      "es2017"
+      "es2017",
+      "es2020"
     ],
-    "module": "commonjs",
+    "module": "ESNext",
     "moduleResolution": "Node",
     "noImplicitAny": true,
     "noImplicitReturns": true,
@@ -27,7 +29,7 @@
     "strict": false,
     "pretty": true,
     "suppressImplicitAnyIndexErrors": true,
-    "target": "ES6",
+    "target": "ESNext",
     "baseUrl": ".",
     "paths": {
       "@__mocks__/*": ["./__mocks__/*"],

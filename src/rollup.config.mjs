@@ -1,20 +1,20 @@
-const json = require('@rollup/plugin-json');
-const replace = require('@rollup/plugin-replace');
-const cleaner = require('rollup-plugin-cleaner');
-const copy = require('rollup-plugin-copy');
-const { folderInput } = require('rollup-plugin-folder-input');
-const peerDepsExternal = require('rollup-plugin-peer-deps-external');
-const typescript = require('rollup-plugin-ts');
+import json from '@rollup/plugin-json';
+import replace from '@rollup/plugin-replace';
+import del from 'rollup-plugin-delete';
+import copy from 'rollup-plugin-copy';
+import { folderInput } from 'rollup-plugin-folder-input';
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import typescript from 'rollup-plugin-ts';
 
 /**
  * This is root config for microservices
  * All microservices extends from this config
  */
-const config = {
+export default {
   input: ['src/**/*.ts', 'migrations/*.ts'],
   output: {
     dir: 'lib',
-    format: 'cjs',
+    format: 'esm',
     preserveModules: true,
     preserveModulesRoot: 'src',
     exports: 'auto',
@@ -27,9 +27,7 @@ const config = {
     '@lomray/microservice-remote-middleware',
   ],
   plugins: [
-    cleaner({
-      targets: ['./lib/'],
-    }),
+    del({ targets: 'lib/*', runOnce: true }),
     replace({
       preventAssignment: true,
       values: {
@@ -61,5 +59,3 @@ const config = {
     }),
   ],
 };
-
-module.exports = config;

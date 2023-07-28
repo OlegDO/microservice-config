@@ -1,20 +1,16 @@
 import json from '@rollup/plugin-json';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
-import cleaner from 'rollup-plugin-cleaner';
+import del from 'rollup-plugin-delete';
 import copy from 'rollup-plugin-copy';
 
 export default {
   input: ['src/mocharc.js'],
   output: {
     dir: 'lib',
-    format: 'cjs',
+    format: 'esm',
   },
   plugins: [
-    cleaner({
-      targets: [
-        './lib/'
-      ]
-    }),
+    del({ targets: 'lib/*', runOnce: true }),
     peerDepsExternal(),
     json(),
     copy({
