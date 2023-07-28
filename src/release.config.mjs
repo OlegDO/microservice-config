@@ -1,10 +1,11 @@
 const shouldPublishNpm = Boolean(Number(process.env.PUBLISH_PACKAGE) || 0);
+const monorepoConfig = await import('@lomray/semantic-release-monorepo');
 
 /**
  * This is root config for microservices
  * All microservices extends from this
  */
-module.exports = {
+export default {
   branches: [
     'prod',
     {
@@ -13,7 +14,7 @@ module.exports = {
       channel: 'beta',
     },
   ],
-  extends: '@lomray/semantic-release-monorepo/package.json',
+  ...monorepoConfig,
   plugins: [
     '@semantic-release/commit-analyzer',
     '@semantic-release/release-notes-generator',
