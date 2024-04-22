@@ -1,4 +1,7 @@
+import releasePlugins from "./plugins/index.js";
+
 const shouldPublishNpm = Boolean(Number(process.env.PUBLISH_PACKAGE) || 0);
+const shouldPerformProdPlugin = Boolean(Number(process.env.PERFORM_PROD_PLUGIN) || 0);
 const monorepoConfig = await import('@lomray/semantic-release-monorepo');
 
 /**
@@ -26,6 +29,7 @@ export default {
           " && echo '${nextRelease.version}' > .version",
       },
     ],
+    ...(shouldPerformProdPlugin ? releasePlugins : []),
     ...(shouldPublishNpm ? [[
       '@semantic-release/npm',
       {
